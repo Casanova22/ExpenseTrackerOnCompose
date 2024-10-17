@@ -1,4 +1,4 @@
-package com.ceej.jc.expensetracker
+package com.ceej.jc.expensetracker.modules
 
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
