@@ -26,11 +26,13 @@ class ValidateOutlinedTextFields {
         val validateHasUpper = validatePasswordHasUppercase(password)
         val validateHasNumeric = validatePasswordHasNumeric(password)
         val validateHasSpecial = validatePasswordHasSpecialCharacter(password)
+        val validatePasswordsMatch =validatePasswordsMatch(password, confirmPassword = "")
 
         val hasError = listOf(
             validateHasUpper,
             validateHasNumeric,
             validateHasSpecial,
+            validatePasswordsMatch
 
         ).all { it }
 
@@ -62,6 +64,6 @@ class ValidateOutlinedTextFields {
     private fun validatePasswordHasSpecialCharacter(password: String): Boolean =
         password.contains(Regex(".*[!@#$%^&*(),.?\":{}|<>].*"))  // Checks for at least one special character
 
-
-
+    private fun validatePasswordsMatch(password: String, confirmPassword: String): Boolean =
+        password.contains
 }

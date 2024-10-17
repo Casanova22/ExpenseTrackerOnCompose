@@ -60,7 +60,6 @@ import androidx.compose.material3.TextField
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.text.TextStyle
 
-
 private const val TAG = "SignUpScreen"
 
 @Composable
@@ -132,7 +131,7 @@ fun SignUpScreen(
                                     append("Must contain letters.")
                                 }
                                 if (!usernameError.usernameContainsNumbers) {
-                                    append("Must contain Numbers.")
+                                    appendln("Must contain Numbers.")
                                 }
                                 if (!usernameError.usernameContainsSpecialCharacters) {
                                     append("Must contain (., !, _).")
@@ -263,7 +262,11 @@ fun SignUpScreen(
                     check = passwordError.hasSpecialCharacter,
                     isError = password.isNotEmpty() && !passwordError.hasSpecialCharacter
                 )
-
+                ConditionContainer(
+                    condition = "Passwords Match",
+                    check = passwordError.passwordsMatch,
+                    isError = password.isNotEmpty() && confirmPassword.isNotEmpty() && !passwordError.passwordsMatch
+                )
             }
 
             // Sign Up Button
@@ -335,7 +338,7 @@ fun ConditionContainer(
         Icons.Rounded.CheckBoxOutlineBlank
     }
 
-    Row{
+    Row {
         Icon(
             imageVector = icon,
             tint = color,
@@ -348,11 +351,8 @@ fun ConditionContainer(
         Spacer(modifier = Modifier.width(10.dp))
         Text(
             text = condition,
-            color = color,
             fontFamily = FontFamily(Font(R.font.varela_round)),
             textAlign = TextAlign.Center
         )
     }
 }
-
-
