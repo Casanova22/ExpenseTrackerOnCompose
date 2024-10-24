@@ -5,7 +5,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.SolidColor
 
-object GradientBrush {
+object ButtonColors {
 
     fun mainButtonGradient(): Brush {
         return Brush.linearGradient(

@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.stateIn
 
 class SignInValidationViewModel(
     private val validateOutlinedTextFields: ValidateOutlinedTextFields = ValidateOutlinedTextFields()
-): ViewModel() {
+) : ViewModel() {
 
     var password by mutableStateOf("")
         private set
@@ -44,7 +44,7 @@ class SignInValidationViewModel(
             )
 
 
-    fun changePassword(value : String) {
+    fun changePassword(value: String) {
         password = value
     }
 

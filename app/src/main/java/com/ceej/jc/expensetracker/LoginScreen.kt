@@ -5,7 +5,6 @@ package com.ceej.jc.expensetracker
 import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.indication
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -22,8 +21,6 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -39,11 +36,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.paint
 import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Shadow
-import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -55,10 +48,10 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.ceej.jc.expensetracker.modules.GradientBrush
+import com.ceej.jc.expensetracker.modules.ButtonColors
+import com.ceej.jc.expensetracker.modules.Fonts
 
 
 private const val TAG = "LoginScreen"
@@ -130,10 +123,7 @@ fun LoginScreen(
                     singleLine = true,
                     shape = RoundedCornerShape(30.dp),
                     modifier = Modifier.fillMaxWidth(),
-                    textStyle = TextStyle(
-                        fontFamily = FontFamily(Font(R.font.varela_round)),
-                        fontSize = 15.sp
-                    )
+                    textStyle = Fonts.fontStyleAndSizeForOutlinedTextFields()
                 )
 
                 //Password
@@ -145,12 +135,10 @@ fun LoginScreen(
                     shape = RoundedCornerShape(30.dp),
                     label = { Text(
                         text = "Password",
-                        style = TextStyle(fontFamily = FontFamily(Font(R.font.varela_round))),
+                        style = Fonts.appMainFont(),
                         fontSize = 16.sp
                     ) },
-                    textStyle = TextStyle(
-                        fontFamily = FontFamily(Font(R.font.varela_round)),
-                        fontSize = 15.sp),
+                    textStyle = Fonts.fontStyleAndSizeForOutlinedTextFields(),
                     singleLine = true,
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                     visualTransformation = if (passwordVisible)
@@ -184,7 +172,7 @@ fun LoginScreen(
                         elevation = 5.dp, shape = RoundedCornerShape(20.dp), clip = true
                     )
                     .background(
-                        brush = GradientBrush.mainButtonGradient(),
+                        brush = ButtonColors.mainButtonGradient(),
                         shape = RoundedCornerShape(20.dp)
                     )
                     .clickable { onLoginClick() },
@@ -193,7 +181,7 @@ fun LoginScreen(
             ) {
                 Text(
                     text = stringResource(id = R.string.log_in),
-                    fontFamily = FontFamily(Font(R.font.varela_round)),
+                    style = Fonts.appMainFont(),
                     color = MaterialTheme.colorScheme.onPrimary,
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold
@@ -210,12 +198,12 @@ fun LoginScreen(
             ) {
                 Text(
                     text = "Don't have an account yet? ",
-                    fontFamily = FontFamily(Font(R.font.varela_round))
+                    style = Fonts.appMainFont()
                 )
                 Text(
                     text = "Sign Up",
                     color = Color(0xFF48908B),
-                    fontFamily = FontFamily(Font(R.font.varela_round)),
+                    style = Fonts.appMainFont(),
                     modifier = Modifier.clickable(
                         indication = null,
                         interactionSource = remember { MutableInteractionSource() }

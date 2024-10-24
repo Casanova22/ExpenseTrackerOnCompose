@@ -1,14 +1,11 @@
 package com.ceej.jc.expensetracker
 
 import android.util.Log
-import androidx.compose.animation.Animatable
 import androidx.compose.animation.animateColorAsState
-import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -26,7 +23,6 @@ import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material.icons.rounded.CheckBox
 import androidx.compose.material.icons.rounded.CheckBoxOutlineBlank
-import androidx.compose.material.icons.rounded.CheckCircle
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -56,9 +52,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.compose.animation.core.Animatable
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.text.TextStyle
+import com.ceej.jc.expensetracker.modules.ButtonColors
+import com.ceej.jc.expensetracker.modules.Fonts
 
 private const val TAG = "SignUpScreen"
 
@@ -105,52 +102,14 @@ fun SignUpScreen(
                 )
             }
 
-            // Username Input
-            OutlinedTextField(
-                value = viewModel.username,
-
-                onValueChange = viewModel::changeUsername,
-                label = { Text(
-                    "Username",
-                    style = TextStyle(fontFamily = FontFamily(Font(R.font.varela_round))),
-                    fontSize = 16.sp,) },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 16.dp),
-                shape = RoundedCornerShape(20.dp),
-                textStyle = TextStyle(
-                    fontFamily = FontFamily(Font(R.font.varela_round)),
-                    fontSize = 15.sp
-                ),
-
-                supportingText = {
-                    if (!usernameError.usernameSuccessful) {
-                        Text(
-                            text = buildString {
-                                if (!usernameError.usernameContainsLetters) {
-                                    append("Must contain letters.")
-                                }
-                                if (!usernameError.usernameContainsNumbers) {
-                                    appendln("Must contain Numbers.")
-                                }
-                                if (!usernameError.usernameContainsSpecialCharacters) {
-                                    append("Must contain (., !, _).")
-                                }
-                            },
-                            color = Color.Red
-                        )
-                    }
-                },
-                isError = !usernameError.usernameSuccessful
-            )
-
             // Email Input
             OutlinedTextField(
                 value = email,
                 onValueChange = onEmailChange,
                 label = { Text(
                     "Email",
-                    style = TextStyle(fontFamily = FontFamily(Font(R.font.varela_round))),
+                    //style = TextStyle(fontFamily = FontFamily(Font(R.font.varela_round))),
+                    style = Fonts.appMainFont(),
                     fontSize = 16.sp,
                     ) },
                 modifier = Modifier
@@ -159,10 +118,7 @@ fun SignUpScreen(
                 shape = RoundedCornerShape(20.dp),
                 keyboardOptions = KeyboardOptions.Default.copy(
                     keyboardType = KeyboardType.Email),
-                textStyle = TextStyle(
-                    fontFamily = FontFamily(Font(R.font.varela_round)),
-                    fontSize = 15.sp
-                ),
+                textStyle = Fonts.appMainFont()
 
             )
 
@@ -199,10 +155,11 @@ fun SignUpScreen(
                 keyboardOptions = KeyboardOptions.Default.copy(
                     keyboardType = KeyboardType.Password
                 ),
-                textStyle = TextStyle(
+                /*textStyle = TextStyle(
                     fontFamily = FontFamily(Font(R.font.varela_round)),
                     fontSize = 15.sp
-                )
+                )*/
+                textStyle = Fonts.appMainFont()
             )
 
             // Confirm Password Input
@@ -211,7 +168,7 @@ fun SignUpScreen(
                 onValueChange = onConfirmPasswordChange,
                 label = { Text(
                     "Confirm Password",
-                    style = TextStyle(fontFamily = FontFamily(Font(R.font.varela_round))),
+                    style = Fonts.appMainFont(),
                     fontSize = 16.sp,) },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -238,10 +195,7 @@ fun SignUpScreen(
                 keyboardOptions = KeyboardOptions.Default.copy(
                     keyboardType = KeyboardType.Password
                 ),
-                textStyle = TextStyle(
-                    fontFamily = FontFamily(Font(R.font.varela_round)),
-                    fontSize = 15.sp
-                )
+                textStyle = Fonts.appMainFont()
             )
 
             Column( modifier = Modifier.padding(top = 20.dp)) {
@@ -270,12 +224,13 @@ fun SignUpScreen(
             }
 
             // Sign Up Button
+            Spacer(modifier = Modifier.weight(15F))
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 16.dp)
                     .background(
-                        brush = GradientBrush.mainButtonGradient(),
+                        brush = ButtonColors.mainButtonGradient(),
                         shape = RoundedCornerShape(20.dp)
                     )
                     .clickable(
@@ -288,7 +243,7 @@ fun SignUpScreen(
                     text = "Sign Up",
                     fontSize = 17.sp,
                     fontWeight = FontWeight.Bold,
-                    fontFamily = FontFamily(Font(R.font.varela_round)),
+                    style = Fonts.appMainFont(),
                     color = Color.White,
                     modifier = Modifier.padding(16.dp)
                 )

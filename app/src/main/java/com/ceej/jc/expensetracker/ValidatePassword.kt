@@ -64,6 +64,7 @@ class ValidateOutlinedTextFields {
     private fun validatePasswordHasSpecialCharacter(password: String): Boolean =
         password.contains(Regex(".*[!@#$%^&*(),.?\":{}|<>].*"))  // Checks for at least one special character
 
-    private fun validatePasswordsMatch(password: String, confirmPassword: String): Boolean =
-        password.contains
+    private fun validatePasswordsMatch(password: String, confirmPassword: String): Boolean {
+        return password == confirmPassword
+    }
 }

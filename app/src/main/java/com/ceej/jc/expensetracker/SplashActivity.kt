@@ -1,12 +1,14 @@
 package com.ceej.jc.expensetracker
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.WindowInsets.Side
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
@@ -24,14 +26,30 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import kotlinx.coroutines.delay
 
 class SplashActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        val windowInsetsController = WindowInsetsControllerCompat(window, window.decorView)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
+        } else {
+            windowInsetsController.systemBarsBehavior =
+                WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+            windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
+        }
+
+        // Set splash content
         setContent {
-            SplashScreen(onTimeOut = {navigateToMainActivity()})
+            SplashScreen(onTimeOut = { navigateToMainActivity() })
         }
     }
 
@@ -43,12 +61,6 @@ class SplashActivity : ComponentActivity() {
 
 @Composable
 fun SplashScreen(onTimeOut: ()-> Unit) {
-    val systemUiController = rememberSystemUiController()
-
-    SideEffect {
-        systemUiController.isNavigationBarVisible = false
-        systemUiController.isStatusBarVisible = false
-    }
 
     LaunchedEffect(Unit) {
         delay(3000)
@@ -57,7 +69,7 @@ fun SplashScreen(onTimeOut: ()-> Unit) {
 
     Box(
         modifier = Modifier
-            .fillMaxSize()
+            .fillMaxSize(1f)
             .background(
                 brush = Brush.linearGradient(
                     colors = listOf(
@@ -80,11 +92,4 @@ fun SplashScreen(onTimeOut: ()-> Unit) {
             color = Color(0xFFFFFFFF)
         )
     }
-}
-
-@Composable
-fun HideSystemBarAndNavBarInSplash() {
-
-
-
 }
