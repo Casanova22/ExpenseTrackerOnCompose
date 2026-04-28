@@ -1,4 +1,4 @@
-package com.ceej.jc.expensetracker
+package com.ceej.common.expensetracker
 
 import org.junit.Test
 

@@ -1,12 +1,10 @@
-package com.ceej.jc.expensetracker.modules
+package com.ceej.common.expensetracker.modules
 
-import androidx.compose.ui.res.fontResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.sp
-import com.ceej.jc.expensetracker.R
-import org.w3c.dom.Text
+import com.ceej.common.expensetracker.R
 
 object Fonts {
 

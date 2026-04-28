@@ -1,4 +1,4 @@
-package com.ceej.jc.expensetracker.ui.theme
+package com.ceej.common.expensetracker.ui.theme
 
 import android.app.Activity
 import android.os.Build

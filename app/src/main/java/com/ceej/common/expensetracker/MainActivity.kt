@@ -1,4 +1,4 @@
-package com.ceej.jc.expensetracker
+package com.ceej.common.expensetracker
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.core.view.WindowInsetsControllerCompat
 import com.arkivanov.decompose.defaultComponentContext
-import com.ceej.jc.expensetracker.decompose.DefaultRootComponent
-import com.ceej.jc.expensetracker.ui.theme.ExpenseTrackerTheme
+import com.ceej.common.expensetracker.decompose.DefaultRootComponent
+import com.ceej.common.expensetracker.ui.theme.ExpenseTrackerTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 class MainActivity : ComponentActivity() {
