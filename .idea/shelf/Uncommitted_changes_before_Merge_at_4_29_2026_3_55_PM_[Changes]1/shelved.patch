@@ -1,0 +1,105 @@
+Index: app/src/main/java/com/ceej/common/expensetracker/signup/component/DefaultSignUpComponent.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/signup/component/DefaultSignUpComponent.kt b/app/src/main/java/com/ceej/common/expensetracker/signup/component/DefaultSignUpComponent.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/ceej/common/expensetracker/signup/component/DefaultSignUpComponent.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ /dev/null	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
+@@ -1,18 +0,0 @@
+-package com.ceej.common.expensetracker.signup.component
+-
+-import com.arkivanov.decompose.ComponentContext
+-
+-class DefaultSignUpComponent(
+-    componentContext: ComponentContext,
+-    private val onSignUpSuccess: () -> Unit,
+-    private val onBack: () -> Unit,
+-) : SignUpComponent, ComponentContext by componentContext {
+-
+-    override fun onSignUpClicked() {
+-        onSignUpSuccess()
+-    }
+-
+-    override fun onBackClicked() {
+-        onBack()
+-    }
+-}
+Index: app/src/main/java/com/ceej/common/expensetracker/splash/component/SplashComponent.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/splash/component/SplashComponent.kt b/app/src/main/java/com/ceej/common/expensetracker/splash/component/SplashComponent.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/ceej/common/expensetracker/splash/component/SplashComponent.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ /dev/null	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
+@@ -1,5 +0,0 @@
+-package com.ceej.common.expensetracker.splash.component
+-
+-interface SplashComponent {
+-    fun onFinished()
+-}
+Index: app/src/main/java/com/ceej/common/expensetracker/signup/component/SignUpComponent.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/signup/component/SignUpComponent.kt b/app/src/main/java/com/ceej/common/expensetracker/signup/component/SignUpComponent.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/ceej/common/expensetracker/signup/component/SignUpComponent.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ /dev/null	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
+@@ -1,6 +0,0 @@
+-package com.ceej.common.expensetracker.signup.component
+-
+-interface SignUpComponent {
+-    fun onSignUpClicked()
+-    fun onBackClicked()
+-}
+Index: app/src/main/java/com/ceej/common/expensetracker/login/component/DefaultLoginComponent.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/login/component/DefaultLoginComponent.kt b/app/src/main/java/com/ceej/common/expensetracker/login/component/DefaultLoginComponent.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/ceej/common/expensetracker/login/component/DefaultLoginComponent.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ /dev/null	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
+@@ -1,18 +0,0 @@
+-package com.ceej.common.expensetracker.login.component
+-
+-import com.arkivanov.decompose.ComponentContext
+-
+-class DefaultLoginComponent(
+-    componentContext: ComponentContext,
+-    private val onLogin: () -> Unit,
+-    private val onSignUp: () -> Unit,
+-) : LoginComponent, ComponentContext by componentContext {
+-
+-    override fun onLoginClicked() {
+-        onLogin()
+-    }
+-
+-    override fun onSignUpClicked() {
+-        onSignUp()
+-    }
+-}
+Index: data/build/tmp/jar/MANIFEST.MF
+===================================================================
+diff --git a/data/build/tmp/jar/MANIFEST.MF b/data/build/tmp/jar/MANIFEST.MF
+deleted file mode 100644
+--- a/data/build/tmp/jar/MANIFEST.MF	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ /dev/null	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
+@@ -1,2 +0,0 @@
+-Manifest-Version: 1.0
+-
+Index: app/src/main/java/com/ceej/common/expensetracker/login/component/LoginComponent.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/login/component/LoginComponent.kt b/app/src/main/java/com/ceej/common/expensetracker/login/component/LoginComponent.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/ceej/common/expensetracker/login/component/LoginComponent.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ /dev/null	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
+@@ -1,6 +0,0 @@
+-package com.ceej.common.expensetracker.login.component
+-
+-interface LoginComponent {
+-    fun onLoginClicked()
+-    fun onSignUpClicked()
+-}
+Index: data/build/.transforms/a55fad51d92c4263863e7f54ee06eab9/results.bin
+===================================================================
+diff --git a/data/build/.transforms/a55fad51d92c4263863e7f54ee06eab9/results.bin b/data/build/.transforms/a55fad51d92c4263863e7f54ee06eab9/results.bin
+deleted file mode 100644
+--- a/data/build/.transforms/a55fad51d92c4263863e7f54ee06eab9/results.bin	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ /dev/null	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
+@@ -1,1 +0,0 @@
+-o/empty

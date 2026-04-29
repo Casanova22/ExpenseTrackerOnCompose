@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.core.view.WindowInsetsControllerCompat
 import com.arkivanov.decompose.defaultComponentContext
-import com.ceej.expensetracker.decompose.DefaultRootComponent
+import com.ceej.expensetracker.root.DefaultRootComponent
 import com.ceej.expensetracker.ui.theme.ExpenseTrackerTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 

@@ -1,0 +1,7 @@
+com.ceej.common.expensetracker.data.test.data-core-1.5.0-0 C:\Users\cyril.casanova\.gradle\caches\8.9\transforms\3b408c2f8b000f681f32d0ecd87bc57e\transformed\core-1.5.0\res
+com.ceej.common.expensetracker.data.test.data-annotation-experimental-1.1.0-1 C:\Users\cyril.casanova\.gradle\caches\8.9\transforms\ba996333a686563f95b7c4b3e0bc348f\transformed\annotation-experimental-1.1.0\res
+com.ceej.common.expensetracker.data.test.data-androidTest-2 C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\generated\res\resValues\androidTest\debug
+com.ceej.common.expensetracker.data.test.data-mergeDebugAndroidTestResources-3 C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.ceej.common.expensetracker.data.test.data-mergeDebugAndroidTestResources-4 C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.ceej.common.expensetracker.data.test.data-merged_res-5 C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\merged_res\debugAndroidTest
+com.ceej.common.expensetracker.data.test.data-packaged_res-6 C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\packaged_res\debug

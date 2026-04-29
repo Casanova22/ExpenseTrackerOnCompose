@@ -1,0 +1,768 @@
+Index: data/build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id(\"com.android.library\")\r\n    id(\"org.jetbrains.kotlin.android\")\r\n    id(\"org.jetbrains.kotlin.plugin.serialization\") version \"1.9.0\"\r\n}\r\n\r\nandroid {\r\n    namespace = \"com.ceej.common.expensetracker.data\"\r\n    compileSdk = 34\r\n\r\n    defaultConfig {\r\n        minSdk = 24\r\n\r\n        testInstrumentationRunner = \"androidx.test.runner.AndroidJUnitRunner\"\r\n        consumerProguardFiles(\"consumer-rules.pro\")\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            isMinifyEnabled = false\r\n            proguardFiles(\r\n                getDefaultProguardFile(\"proguard-android-optimize.txt\"),\r\n                \"proguard-rules.pro\"\r\n            )\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility = JavaVersion.VERSION_11\r\n        targetCompatibility = JavaVersion.VERSION_11\r\n    }\r\n    kotlinOptions {\r\n        jvmTarget = \"11\"\r\n    }\r\n}\r\n\r\ndependencies {\r\n    implementation(project(\":domain\"))\r\n    implementation(project(\":common\"))\r\n\r\n    val ktorVersion = \"2.3.12\"\r\n    implementation(\"io.ktor:ktor-client-core:$ktorVersion\")\r\n    implementation(\"io.ktor:ktor-client-okhttp:$ktorVersion\")\r\n    implementation(\"io.ktor:ktor-client-content-negotiation:$ktorVersion\")\r\n    implementation(\"io.ktor:ktor-serialization-kotlinx-json:$ktorVersion\")\r\n    implementation(\"io.ktor:ktor-client-logging:$ktorVersion\")\r\n    implementation(\"org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1\")\r\n\r\n    testImplementation(\"junit:junit:4.13.2\")\r\n    androidTestImplementation(\"androidx.test.ext:junit:1.1.5\")\r\n    androidTestImplementation(\"androidx.test.espresso:espresso-core:3.5.1\")\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/build.gradle.kts b/data/build.gradle.kts
+--- a/data/build.gradle.kts	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/data/build.gradle.kts	(date 1777448176085)
+@@ -5,7 +5,7 @@
+ }
+ 
+ android {
+-    namespace = "com.ceej.common.expensetracker.data"
++    namespace = "com.ceej.expensetracker.data"
+     compileSdk = 34
+ 
+     defaultConfig {
+Index: domain/src/main/java/com/ceej/common/use_case/expense/GetExpenses.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.ceej.common.use_case.expense\r\n\r\nimport com.ceej.common.request.Request\r\nimport com.ceej.common.model.Expense\r\nimport com.ceej.common.repository.ExpenseRepository\r\nimport kotlinx.coroutines.flow.Flow\r\n\r\nclass GetExpenses(\r\n    private val repository: ExpenseRepository\r\n) {\r\n    operator fun invoke(): Flow<Request<List<Expense>>> {\r\n        return repository.getExpenses()\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/domain/src/main/java/com/ceej/common/use_case/expense/GetExpenses.kt b/domain/src/main/java/com/ceej/common/use_case/expense/GetExpenses.kt
+--- a/domain/src/main/java/com/ceej/common/use_case/expense/GetExpenses.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/domain/src/main/java/com/ceej/common/use_case/expense/GetExpenses.kt	(date 1777448122319)
+@@ -1,6 +1,6 @@
+ package com.ceej.common.use_case.expense
+ 
+-import com.ceej.common.request.Request
++import com.ceej.expensetracker.request.Request
+ import com.ceej.common.model.Expense
+ import com.ceej.common.repository.ExpenseRepository
+ import kotlinx.coroutines.flow.Flow
+Index: data/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"com.ceej.jc.expensetracker.data\" >\r\n\r\n    <uses-sdk android:minSdkVersion=\"24\" />\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml b/data/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml
+--- a/data/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/data/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml	(date 1777449301561)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-    package="com.ceej.jc.expensetracker.data" >
++    package="com.ceej.expensetracker.data" >
+ 
+     <uses-sdk android:minSdkVersion="24" />
+ 
+Index: app/build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id(\"com.android.application\")\r\n    id(\"org.jetbrains.kotlin.android\")\r\n    id(\"kotlin-parcelize\")\r\n}\r\n\r\nandroid {\r\n    namespace = \"com.ceej.common.expensetracker\"\r\n    compileSdk = 34\r\n\r\n    defaultConfig {\r\n        applicationId = \"com.ceej.jc.expensetracker\"\r\n        minSdk = 24\r\n        targetSdk = 34\r\n        versionCode = 1\r\n        versionName = \"1.0\"\r\n\r\n        testInstrumentationRunner = \"androidx.test.runner.AndroidJUnitRunner\"\r\n        vectorDrawables {\r\n            useSupportLibrary = true\r\n        }\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            isMinifyEnabled = false\r\n            proguardFiles(\r\n                getDefaultProguardFile(\"proguard-android-optimize.txt\"),\r\n                \"proguard-rules.pro\"\r\n            )\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility = JavaVersion.VERSION_11\r\n        targetCompatibility = JavaVersion.VERSION_11\r\n    }\r\n    kotlinOptions {\r\n        jvmTarget = \"11\"\r\n    }\r\n    buildFeatures {\r\n        compose = true\r\n    }\r\n    composeOptions {\r\n        kotlinCompilerExtensionVersion = \"1.5.1\"\r\n    }\r\n    packaging {\r\n        resources {\r\n            excludes += \"/META-INF/{AL2.0,LGPL2.1}\"\r\n        }\r\n    }\r\n}\r\n\r\ndependencies {\r\n    implementation(project(\":domain\"))\r\n    implementation(project(\":data\"))\r\n    implementation(project(\":common\"))\r\n\r\n    val decomposeVersion = \"2.2.2\"\r\n    implementation(\"com.arkivanov.decompose:decompose:$decomposeVersion\")\r\n    implementation(\"com.arkivanov.decompose:extensions-compose-jetpack:$decomposeVersion\")\r\n\r\n    implementation(\"androidx.navigation:navigation-compose:2.7.1\")\r\n\r\n    implementation(\"com.google.accompanist:accompanist-systemuicontroller:0.30.0\")\r\n    implementation(\"androidx.compose.material:material:1.4.0\")\r\n    implementation(\"androidx.compose.material:material-icons-extended:1.5.4\")\r\n    implementation(\"androidx.core:core-ktx:1.13.1\")\r\n    implementation(\"androidx.lifecycle:lifecycle-runtime-ktx:2.8.4\")\r\n    implementation(\"androidx.activity:activity-compose:1.9.1\")\r\n    implementation(platform(\"androidx.compose:compose-bom:2023.08.00\"))\r\n    implementation(\"androidx.compose.ui:ui:1.7.2\")\r\n    implementation(\"androidx.compose.ui:ui-graphics\")\r\n    implementation(\"androidx.compose.ui:ui-tooling-preview\")\r\n    implementation(\"androidx.compose.material3:material3\")\r\n    implementation(\"androidx.compose.animation:animation:1.5.0\")\r\n    testImplementation(\"junit:junit:4.13.2\")\r\n    androidTestImplementation(\"androidx.test.ext:junit:1.2.1\")\r\n    androidTestImplementation(\"androidx.test.espresso:espresso-core:3.6.1\")\r\n    androidTestImplementation(platform(\"androidx.compose:compose-bom:2023.08.00\"))\r\n    androidTestImplementation(\"androidx.compose.ui:ui-test-junit4\")\r\n    debugImplementation(\"androidx.compose.ui:ui-tooling:1.7.2\")\r\n    debugImplementation(\"androidx.compose.ui:ui-test-manifest\")\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle.kts b/app/build.gradle.kts
+--- a/app/build.gradle.kts	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/build.gradle.kts	(date 1777443765750)
+@@ -5,7 +5,7 @@
+ }
+ 
+ android {
+-    namespace = "com.ceej.common.expensetracker"
++    namespace = "com.ceej.expensetracker"
+     compileSdk = 34
+ 
+     defaultConfig {
+Index: data/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"com.ceej.jc.expensetracker.data\" >\r\n\r\n    <uses-sdk android:minSdkVersion=\"24\" />\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml b/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+--- a/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml	(date 1777449301558)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-    package="com.ceej.jc.expensetracker.data" >
++    package="com.ceej.expensetracker.data" >
+ 
+     <uses-sdk android:minSdkVersion="24" />
+ 
+Index: data/src/main/java/com/ceej/common/expensetracker/data/network/NetworkConnectivityObserver.kt
+===================================================================
+diff --git a/data/src/main/java/com/ceej/common/expensetracker/data/network/NetworkConnectivityObserver.kt b/data/src/main/java/com/ceej/expensetracker/data/network/NetworkConnectivityObserver.kt
+rename from data/src/main/java/com/ceej/common/expensetracker/data/network/NetworkConnectivityObserver.kt
+rename to data/src/main/java/com/ceej/expensetracker/data/network/NetworkConnectivityObserver.kt
+--- a/data/src/main/java/com/ceej/common/expensetracker/data/network/NetworkConnectivityObserver.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/data/src/main/java/com/ceej/expensetracker/data/network/NetworkConnectivityObserver.kt	(date 1777448122278)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.data.network
++package com.ceej.expensetracker.data.network
+ 
+ import android.content.Context
+ import android.net.ConnectivityManager
+Index: data/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>1<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n2<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n3    package=\"com.ceej.jc.expensetracker.data\" >\r\n4\r\n5    <uses-sdk android:minSdkVersion=\"24\" />\r\n6\r\n7</manifest>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt b/data/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt
+--- a/data/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/data/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt	(date 1777449301562)
+@@ -1,6 +1,6 @@
+ 1<?xml version="1.0" encoding="utf-8"?>
+ 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-3    package="com.ceej.jc.expensetracker.data" >
++3    package="com.ceej.expensetracker.data" >
+ 4
+ 5    <uses-sdk android:minSdkVersion="24" />
+ 6
+Index: data/src/main/java/com/ceej/common/expensetracker/data/remote/KtorClient.kt
+===================================================================
+diff --git a/data/src/main/java/com/ceej/common/expensetracker/data/remote/KtorClient.kt b/data/src/main/java/com/ceej/expensetracker/data/remote/KtorClient.kt
+rename from data/src/main/java/com/ceej/common/expensetracker/data/remote/KtorClient.kt
+rename to data/src/main/java/com/ceej/expensetracker/data/remote/KtorClient.kt
+--- a/data/src/main/java/com/ceej/common/expensetracker/data/remote/KtorClient.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/data/src/main/java/com/ceej/expensetracker/data/remote/KtorClient.kt	(date 1777448122284)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.data.remote
++package com.ceej.expensetracker.data.remote
+ 
+ import io.ktor.client.*
+ import io.ktor.client.engine.okhttp.*
+Index: common/src/main/java/com/ceej/common/request/Request.kt
+===================================================================
+diff --git a/common/src/main/java/com/ceej/common/request/Request.kt b/common/src/main/java/com/ceej/expensetracker/request/Request.kt
+rename from common/src/main/java/com/ceej/common/request/Request.kt
+rename to common/src/main/java/com/ceej/expensetracker/request/Request.kt
+--- a/common/src/main/java/com/ceej/common/request/Request.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/common/src/main/java/com/ceej/expensetracker/request/Request.kt	(date 1777448122249)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.request
++package com.ceej.expensetracker.request
+ 
+ sealed class Request<T>(val data: T? = null, val message: String? = null) {
+     class Success<T>(data: T) : Request<T>(data)
+Index: data/src/main/java/com/ceej/common/expensetracker/data/repository/ExpenseRepositoryImpl.kt
+===================================================================
+diff --git a/data/src/main/java/com/ceej/common/expensetracker/data/repository/ExpenseRepositoryImpl.kt b/data/src/main/java/com/ceej/expensetracker/data/repository/ExpenseRepositoryImpl.kt
+rename from data/src/main/java/com/ceej/common/expensetracker/data/repository/ExpenseRepositoryImpl.kt
+rename to data/src/main/java/com/ceej/expensetracker/data/repository/ExpenseRepositoryImpl.kt
+--- a/data/src/main/java/com/ceej/common/expensetracker/data/repository/ExpenseRepositoryImpl.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/data/src/main/java/com/ceej/expensetracker/data/repository/ExpenseRepositoryImpl.kt	(date 1777448122291)
+@@ -1,9 +1,9 @@
+-package com.ceej.common.expensetracker.data.repository
++package com.ceej.expensetracker.data.repository
+ 
+-import com.ceej.common.request.Request
+-import com.ceej.common.expensetracker.data.remote.KtorClient
+-import com.ceej.common.expensetracker.data.remote.dto.ExpenseDto
+-import com.ceej.common.expensetracker.data.remote.dto.toExpense
++import com.ceej.expensetracker.request.Request
++import com.ceej.expensetracker.data.remote.KtorClient
++import com.ceej.expensetracker.data.remote.dto.ExpenseDto
++import com.ceej.expensetracker.data.remote.dto.toExpense
+ import com.ceej.common.model.Expense
+ import com.ceej.common.repository.ExpenseRepository
+ import io.ktor.client.call.*
+Index: domain/src/main/java/com/ceej/common/repository/ExpenseRepository.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.ceej.common.repository\r\n\r\nimport com.ceej.common.request.Request\r\nimport com.ceej.common.model.Expense\r\nimport kotlinx.coroutines.flow.Flow\r\n\r\ninterface ExpenseRepository {\r\n    fun getExpenses(): Flow<Request<List<Expense>>>\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/domain/src/main/java/com/ceej/common/repository/ExpenseRepository.kt b/domain/src/main/java/com/ceej/common/repository/ExpenseRepository.kt
+--- a/domain/src/main/java/com/ceej/common/repository/ExpenseRepository.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/domain/src/main/java/com/ceej/common/repository/ExpenseRepository.kt	(date 1777448122257)
+@@ -1,6 +1,6 @@
+ package com.ceej.common.repository
+ 
+-import com.ceej.common.request.Request
++import com.ceej.expensetracker.request.Request
+ import com.ceej.common.model.Expense
+ import kotlinx.coroutines.flow.Flow
+ 
+Index: data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>4\r\n0
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab b/data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab
+--- a/data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab	(date 1777448125131)
+@@ -1,2 +1,2 @@
+-4
++8
+ 0
+\ No newline at end of file
+Index: app/src/main/java/com/ceej/expensetracker/screens/splash/component/SplashComponent.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/expensetracker/screens/splash/component/SplashComponent.kt b/app/src/main/java/com/ceej/expensetracker/screens/splash/component/SplashComponent.kt
+new file mode 100644
+--- /dev/null	(date 1777447806141)
++++ b/app/src/main/java/com/ceej/expensetracker/screens/splash/component/SplashComponent.kt	(date 1777447806141)
+@@ -0,0 +1,5 @@
++package com.ceej.expensetracker.screens.splash.component
++
++interface SplashComponent {
++    fun onFinished()
++}
+Index: data/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>com.ceej.jc.expensetracker.data\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt b/data/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt
+--- a/data/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/data/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt	(date 1777449301603)
+@@ -1,1 +1,1 @@
+-com.ceej.jc.expensetracker.data
++com.ceej.expensetracker.data
+Index: data/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#Tue Apr 28 15:21:42 SGT 2026\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/data/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties b/data/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+--- a/data/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/data/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties	(date 1777449301504)
+@@ -1,1 +1,1 @@
+-#Tue Apr 28 15:21:42 SGT 2026
++#Wed Apr 29 15:55:01 SGT 2026
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" project-jdk-name=\"jbr-21\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/.idea/misc.xml	(date 1777444884771)
+@@ -1,3 +1,4 @@
++<?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="jbr-21" project-jdk-type="JavaSDK">
+Index: data/build/outputs/logs/manifest-merger-debug-report.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>-- Merging decision tree log ---\r\nmanifest\r\nADDED from C:\\Users\\cyril.casanova\\AndroidStudioProjects\\ExpenseTrackerOnCompose\\data\\build\\intermediates\\tmp\\ProcessLibraryManifest\\debug\\tempAndroidManifest1848643349974485615.xml:2:13-83\r\nINJECTED from C:\\Users\\cyril.casanova\\AndroidStudioProjects\\ExpenseTrackerOnCompose\\data\\build\\intermediates\\tmp\\ProcessLibraryManifest\\debug\\tempAndroidManifest1848643349974485615.xml:2:13-83\r\n\tpackage\r\n\t\tINJECTED from C:\\Users\\cyril.casanova\\AndroidStudioProjects\\ExpenseTrackerOnCompose\\data\\build\\intermediates\\tmp\\ProcessLibraryManifest\\debug\\tempAndroidManifest1848643349974485615.xml\r\n\txmlns:android\r\n\t\tADDED from C:\\Users\\cyril.casanova\\AndroidStudioProjects\\ExpenseTrackerOnCompose\\data\\build\\intermediates\\tmp\\ProcessLibraryManifest\\debug\\tempAndroidManifest1848643349974485615.xml:2:23-81\r\nuses-sdk\r\nINJECTED from C:\\Users\\cyril.casanova\\AndroidStudioProjects\\ExpenseTrackerOnCompose\\data\\build\\intermediates\\tmp\\ProcessLibraryManifest\\debug\\tempAndroidManifest1848643349974485615.xml reason: use-sdk injection requested\r\nINJECTED from C:\\Users\\cyril.casanova\\AndroidStudioProjects\\ExpenseTrackerOnCompose\\data\\build\\intermediates\\tmp\\ProcessLibraryManifest\\debug\\tempAndroidManifest1848643349974485615.xml\r\nINJECTED from C:\\Users\\cyril.casanova\\AndroidStudioProjects\\ExpenseTrackerOnCompose\\data\\build\\intermediates\\tmp\\ProcessLibraryManifest\\debug\\tempAndroidManifest1848643349974485615.xml\r\n\tandroid:targetSdkVersion\r\n\t\tINJECTED from C:\\Users\\cyril.casanova\\AndroidStudioProjects\\ExpenseTrackerOnCompose\\data\\build\\intermediates\\tmp\\ProcessLibraryManifest\\debug\\tempAndroidManifest1848643349974485615.xml\r\n\tandroid:minSdkVersion\r\n\t\tINJECTED from C:\\Users\\cyril.casanova\\AndroidStudioProjects\\ExpenseTrackerOnCompose\\data\\build\\intermediates\\tmp\\ProcessLibraryManifest\\debug\\tempAndroidManifest1848643349974485615.xml\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/build/outputs/logs/manifest-merger-debug-report.txt b/data/build/outputs/logs/manifest-merger-debug-report.txt
+--- a/data/build/outputs/logs/manifest-merger-debug-report.txt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/data/build/outputs/logs/manifest-merger-debug-report.txt	(date 1777449301556)
+@@ -1,16 +1,16 @@
+ -- Merging decision tree log ---
+ manifest
+-ADDED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1848643349974485615.xml:2:13-83
+-INJECTED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1848643349974485615.xml:2:13-83
++ADDED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6029601513431896965.xml:2:13-83
++INJECTED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6029601513431896965.xml:2:13-83
+ 	package
+-		INJECTED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1848643349974485615.xml
++		INJECTED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6029601513431896965.xml
+ 	xmlns:android
+-		ADDED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1848643349974485615.xml:2:23-81
++		ADDED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6029601513431896965.xml:2:23-81
+ uses-sdk
+-INJECTED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1848643349974485615.xml reason: use-sdk injection requested
+-INJECTED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1848643349974485615.xml
+-INJECTED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1848643349974485615.xml
++INJECTED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6029601513431896965.xml reason: use-sdk injection requested
++INJECTED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6029601513431896965.xml
++INJECTED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6029601513431896965.xml
+ 	android:targetSdkVersion
+-		INJECTED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1848643349974485615.xml
++		INJECTED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6029601513431896965.xml
+ 	android:minSdkVersion
+-		INJECTED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1848643349974485615.xml
++		INJECTED from C:\Users\cyril.casanova\AndroidStudioProjects\ExpenseTrackerOnCompose\data\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6029601513431896965.xml
+Index: data/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"version\": 3,\r\n  \"artifactType\": {\r\n    \"type\": \"AAPT_FRIENDLY_MERGED_MANIFESTS\",\r\n    \"kind\": \"Directory\"\r\n  },\r\n  \"applicationId\": \"com.ceej.jc.expensetracker.data\",\r\n  \"variantName\": \"debug\",\r\n  \"elements\": [\r\n    {\r\n      \"type\": \"SINGLE\",\r\n      \"filters\": [],\r\n      \"attributes\": [],\r\n      \"outputFile\": \"AndroidManifest.xml\"\r\n    }\r\n  ],\r\n  \"elementType\": \"File\"\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json b/data/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json
+--- a/data/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/data/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json	(date 1777449301564)
+@@ -4,7 +4,7 @@
+     "type": "AAPT_FRIENDLY_MERGED_MANIFESTS",
+     "kind": "Directory"
+   },
+-  "applicationId": "com.ceej.jc.expensetracker.data",
++  "applicationId": "com.ceej.expensetracker.data",
+   "variantName": "debug",
+   "elements": [
+     {
+Index: data/src/main/java/com/ceej/common/expensetracker/data/remote/dto/ExpenseDto.kt
+===================================================================
+diff --git a/data/src/main/java/com/ceej/common/expensetracker/data/remote/dto/ExpenseDto.kt b/data/src/main/java/com/ceej/expensetracker/data/remote/dto/ExpenseDto.kt
+rename from data/src/main/java/com/ceej/common/expensetracker/data/remote/dto/ExpenseDto.kt
+rename to data/src/main/java/com/ceej/expensetracker/data/remote/dto/ExpenseDto.kt
+--- a/data/src/main/java/com/ceej/common/expensetracker/data/remote/dto/ExpenseDto.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/data/src/main/java/com/ceej/expensetracker/data/remote/dto/ExpenseDto.kt	(date 1777448122241)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.data.remote.dto
++package com.ceej.expensetracker.data.remote.dto
+ 
+ import com.ceej.common.model.Expense
+ import kotlinx.serialization.SerialName
+Index: app/src/main/java/com/ceej/common/expensetracker/RootContent.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/RootContent.kt b/app/src/main/java/com/ceej/expensetracker/root/RootContent.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/RootContent.kt
+rename to app/src/main/java/com/ceej/expensetracker/root/RootContent.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/RootContent.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/root/RootContent.kt	(date 1777448122311)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker
++package com.ceej.expensetracker.root
+ 
+ import androidx.compose.runtime.Composable
+ import androidx.compose.runtime.collectAsState
+@@ -10,13 +10,12 @@
+ import com.arkivanov.decompose.extensions.compose.jetpack.stack.Children
+ import com.arkivanov.decompose.extensions.compose.jetpack.stack.animation.slide
+ import com.arkivanov.decompose.extensions.compose.jetpack.stack.animation.stackAnimation
+-import com.ceej.common.expensetracker.data.network.NetworkConnectivityObserver
+-import com.ceej.common.expensetracker.decompose.RootComponent
++import com.ceej.expensetracker.data.network.NetworkConnectivityObserver
+ import com.ceej.common.network.ConnectivityObserver
+-import com.ceej.common.expensetracker.login.LoginScreen
+-import com.ceej.common.expensetracker.modules.NoInternetAlertDialog
+-import com.ceej.common.expensetracker.signup.SignUpScreen
+-import com.ceej.common.expensetracker.splash.SplashScreen
++import com.ceej.expensetracker.screens.login.LoginScreen
++import com.ceej.expensetracker.modules.NoInternetAlertDialog
++import com.ceej.expensetracker.screens.signup.SignUpScreen
++import com.ceej.expensetracker.screens.splash.SplashScreen
+ 
+ @Composable
+ fun RootContent(component: RootComponent) {
+Index: app/src/main/java/com/ceej/common/expensetracker/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/MainActivity.kt b/app/src/main/java/com/ceej/expensetracker/MainActivity.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/MainActivity.kt
+rename to app/src/main/java/com/ceej/expensetracker/MainActivity.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/MainActivity.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/MainActivity.kt	(date 1777447897535)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker
++package com.ceej.expensetracker
+ 
+ import android.os.Bundle
+ import androidx.activity.ComponentActivity
+@@ -12,8 +12,9 @@
+ import androidx.compose.ui.graphics.Color
+ import androidx.core.view.WindowInsetsControllerCompat
+ import com.arkivanov.decompose.defaultComponentContext
+-import com.ceej.common.expensetracker.decompose.DefaultRootComponent
+-import com.ceej.common.expensetracker.ui.theme.ExpenseTrackerTheme
++import com.ceej.expensetracker.root.DefaultRootComponent
++import com.ceej.expensetracker.root.RootContent
++import com.ceej.expensetracker.ui.theme.ExpenseTrackerTheme
+ import com.google.accompanist.systemuicontroller.rememberSystemUiController
+ 
+ class MainActivity : ComponentActivity() {
+Index: app/src/main/java/com/ceej/common/expensetracker/login/LoginState.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/login/LoginState.kt b/app/src/main/java/com/ceej/expensetracker/screens/login/LoginState.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/login/LoginState.kt
+rename to app/src/main/java/com/ceej/expensetracker/screens/login/LoginState.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/login/LoginState.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/screens/login/LoginState.kt	(date 1777447806305)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.login
++package com.ceej.expensetracker.screens.login
+ 
+ data class LoginState(
+     val email: String = "",
+Index: app/src/main/java/com/ceej/common/expensetracker/login/LoginViewModel.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/login/LoginViewModel.kt b/app/src/main/java/com/ceej/expensetracker/screens/login/LoginViewModel.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/login/LoginViewModel.kt
+rename to app/src/main/java/com/ceej/expensetracker/screens/login/LoginViewModel.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/login/LoginViewModel.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/screens/login/LoginViewModel.kt	(date 1777447806170)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.login
++package com.ceej.expensetracker.screens.login
+ 
+ import androidx.lifecycle.ViewModel
+ import kotlinx.coroutines.flow.MutableStateFlow
+Index: app/src/main/java/com/ceej/common/expensetracker/signup/SignUpReducer.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/signup/SignUpReducer.kt b/app/src/main/java/com/ceej/expensetracker/screens/signup/SignUpReducer.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/signup/SignUpReducer.kt
+rename to app/src/main/java/com/ceej/expensetracker/screens/signup/SignUpReducer.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/signup/SignUpReducer.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/screens/signup/SignUpReducer.kt	(date 1777447806185)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.signup
++package com.ceej.expensetracker.screens.signup
+ 
+ import com.ceej.common.validation.PasswordValidationState
+ import com.ceej.common.validation.UsernameValidationState
+Index: app/src/main/java/com/ceej/common/expensetracker/login/LoginReducer.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/login/LoginReducer.kt b/app/src/main/java/com/ceej/expensetracker/screens/login/LoginReducer.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/login/LoginReducer.kt
+rename to app/src/main/java/com/ceej/expensetracker/screens/login/LoginReducer.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/login/LoginReducer.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/screens/login/LoginReducer.kt	(date 1777447806014)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.login
++package com.ceej.expensetracker.screens.login
+ 
+ class LoginReducer {
+     fun reduce(state: LoginState, event: LoginEvent): LoginState {
+Index: app/src/main/java/com/ceej/common/expensetracker/login/LoginScreen.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/login/LoginScreen.kt b/app/src/main/java/com/ceej/expensetracker/screens/login/LoginScreen.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/login/LoginScreen.kt
+rename to app/src/main/java/com/ceej/expensetracker/screens/login/LoginScreen.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/login/LoginScreen.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/screens/login/LoginScreen.kt	(date 1777447986119)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.login
++package com.ceej.expensetracker.screens.login
+ 
+ import androidx.compose.foundation.background
+ import androidx.compose.foundation.clickable
+@@ -48,10 +48,10 @@
+ import androidx.compose.ui.unit.dp
+ import androidx.compose.ui.unit.sp
+ import androidx.lifecycle.viewmodel.compose.viewModel
+-import com.ceej.common.expensetracker.R
+-import com.ceej.common.expensetracker.login.component.LoginComponent
+-import com.ceej.common.expensetracker.modules.ButtonColors
+-import com.ceej.common.expensetracker.modules.Fonts
++import com.ceej.expensetracker.R
++import com.ceej.expensetracker.screens.login.component.LoginComponent
++import com.ceej.expensetracker.modules.ButtonColors
++import com.ceej.expensetracker.modules.Fonts
+ 
+ private const val TAG = "LoginScreen"
+ 
+Index: app/src/main/java/com/ceej/common/expensetracker/decompose/DefaultSignUpComponent.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/decompose/DefaultSignUpComponent.kt b/app/src/main/java/com/ceej/expensetracker/screens/signup/component/DefaultSignUpComponent.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/decompose/DefaultSignUpComponent.kt
+rename to app/src/main/java/com/ceej/expensetracker/screens/signup/component/DefaultSignUpComponent.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/decompose/DefaultSignUpComponent.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/screens/signup/component/DefaultSignUpComponent.kt	(date 1777447806279)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.decompose
++package com.ceej.expensetracker.screens.signup.component
+ 
+ import com.arkivanov.decompose.ComponentContext
+ 
+Index: app/src/main/java/com/ceej/common/expensetracker/decompose/SignUpComponent.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/decompose/SignUpComponent.kt b/app/src/main/java/com/ceej/expensetracker/screens/signup/component/SignUpComponent.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/decompose/SignUpComponent.kt
+rename to app/src/main/java/com/ceej/expensetracker/screens/signup/component/SignUpComponent.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/decompose/SignUpComponent.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/screens/signup/component/SignUpComponent.kt	(date 1777447805962)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.decompose
++package com.ceej.expensetracker.screens.signup.component
+ 
+ interface SignUpComponent {
+     fun onSignUpClicked()
+Index: app/src/main/java/com/ceej/common/expensetracker/splash/component/DefaultSplashComponent.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/splash/component/DefaultSplashComponent.kt b/app/src/main/java/com/ceej/expensetracker/screens/splash/component/DefaultSplashComponent.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/splash/component/DefaultSplashComponent.kt
+rename to app/src/main/java/com/ceej/expensetracker/screens/splash/component/DefaultSplashComponent.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/splash/component/DefaultSplashComponent.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/screens/splash/component/DefaultSplashComponent.kt	(date 1777447806288)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.splash.component
++package com.ceej.expensetracker.screens.splash.component
+ 
+ import com.arkivanov.decompose.ComponentContext
+ 
+Index: app/src/main/java/com/ceej/common/expensetracker/ui/theme/Theme.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/ui/theme/Theme.kt b/app/src/main/java/com/ceej/expensetracker/ui/theme/Theme.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/ui/theme/Theme.kt
+rename to app/src/main/java/com/ceej/expensetracker/ui/theme/Theme.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/ui/theme/Theme.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/ui/theme/Theme.kt	(date 1777447806053)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.ui.theme
++package com.ceej.expensetracker.ui.theme
+ 
+ import android.app.Activity
+ import android.os.Build
+Index: app/src/main/java/com/ceej/common/expensetracker/ui/theme/Type.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/ui/theme/Type.kt b/app/src/main/java/com/ceej/expensetracker/ui/theme/Type.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/ui/theme/Type.kt
+rename to app/src/main/java/com/ceej/expensetracker/ui/theme/Type.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/ui/theme/Type.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/ui/theme/Type.kt	(date 1777447806108)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.ui.theme
++package com.ceej.expensetracker.ui.theme
+ 
+ import androidx.compose.material3.Typography
+ import androidx.compose.ui.text.TextStyle
+Index: app/src/main/java/com/ceej/common/expensetracker/decompose/DefaultLoginComponent.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/decompose/DefaultLoginComponent.kt b/app/src/main/java/com/ceej/expensetracker/screens/login/component/DefaultLoginComponent.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/decompose/DefaultLoginComponent.kt
+rename to app/src/main/java/com/ceej/expensetracker/screens/login/component/DefaultLoginComponent.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/decompose/DefaultLoginComponent.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/screens/login/component/DefaultLoginComponent.kt	(date 1777447805984)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.decompose
++package com.ceej.expensetracker.screens.login.component
+ 
+ import com.arkivanov.decompose.ComponentContext
+ 
+Index: app/src/main/java/com/ceej/common/expensetracker/decompose/LoginComponent.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/decompose/LoginComponent.kt b/app/src/main/java/com/ceej/expensetracker/screens/login/component/LoginComponent.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/decompose/LoginComponent.kt
+rename to app/src/main/java/com/ceej/expensetracker/screens/login/component/LoginComponent.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/decompose/LoginComponent.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/screens/login/component/LoginComponent.kt	(date 1777447806118)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.decompose
++package com.ceej.expensetracker.screens.login.component
+ 
+ interface LoginComponent {
+     fun onLoginClicked()
+Index: app/src/main/java/com/ceej/common/expensetracker/splash/SplashScreen.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/splash/SplashScreen.kt b/app/src/main/java/com/ceej/expensetracker/screens/splash/SplashScreen.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/splash/SplashScreen.kt
+rename to app/src/main/java/com/ceej/expensetracker/screens/splash/SplashScreen.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/splash/SplashScreen.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/screens/splash/SplashScreen.kt	(date 1777448033320)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.splash
++package com.ceej.expensetracker.screens.splash
+ 
+ import androidx.compose.foundation.background
+ import androidx.compose.foundation.layout.Box
+@@ -18,8 +18,8 @@
+ import androidx.compose.ui.text.style.TextAlign
+ import androidx.compose.ui.unit.dp
+ import androidx.compose.ui.unit.sp
+-import com.ceej.common.expensetracker.R
+-import com.ceej.common.expensetracker.splash.component.SplashComponent
++import com.ceej.expensetracker.R
++import com.ceej.expensetracker.screens.splash.component.SplashComponent
+ import kotlinx.coroutines.delay
+ 
+ @Composable
+Index: app/src/main/java/com/ceej/common/expensetracker/modules/ButtonColors.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/modules/ButtonColors.kt b/app/src/main/java/com/ceej/expensetracker/modules/ButtonColors.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/modules/ButtonColors.kt
+rename to app/src/main/java/com/ceej/expensetracker/modules/ButtonColors.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/modules/ButtonColors.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/modules/ButtonColors.kt	(date 1777447806296)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.modules
++package com.ceej.expensetracker.modules
+ 
+ import androidx.compose.ui.graphics.Brush
+ import androidx.compose.ui.graphics.Color
+Index: app/src/main/java/com/ceej/common/expensetracker/modules/Fonts.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/modules/Fonts.kt b/app/src/main/java/com/ceej/expensetracker/modules/Fonts.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/modules/Fonts.kt
+rename to app/src/main/java/com/ceej/expensetracker/modules/Fonts.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/modules/Fonts.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/modules/Fonts.kt	(date 1777447806028)
+@@ -1,10 +1,10 @@
+-package com.ceej.common.expensetracker.modules
++package com.ceej.expensetracker.modules
+ 
+ import androidx.compose.ui.text.TextStyle
+ import androidx.compose.ui.text.font.Font
+ import androidx.compose.ui.text.font.FontFamily
+ import androidx.compose.ui.unit.sp
+-import com.ceej.common.expensetracker.R
++import com.ceej.expensetracker.R
+ 
+ object Fonts {
+ 
+Index: app/src/main/java/com/ceej/common/expensetracker/signup/SignUpScreen.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/signup/SignUpScreen.kt b/app/src/main/java/com/ceej/expensetracker/screens/signup/SignUpScreen.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/signup/SignUpScreen.kt
+rename to app/src/main/java/com/ceej/expensetracker/screens/signup/SignUpScreen.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/signup/SignUpScreen.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/screens/signup/SignUpScreen.kt	(date 1777448004191)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.signup
++package com.ceej.expensetracker.screens.signup
+ 
+ import androidx.compose.animation.animateColorAsState
+ import androidx.compose.animation.core.Animatable
+@@ -52,10 +52,10 @@
+ import androidx.compose.ui.unit.dp
+ import androidx.compose.ui.unit.sp
+ import androidx.lifecycle.viewmodel.compose.viewModel
+-import com.ceej.common.expensetracker.R
+-import com.ceej.common.expensetracker.modules.ButtonColors
+-import com.ceej.common.expensetracker.modules.Fonts
+-import com.ceej.common.expensetracker.signup.component.SignUpComponent
++import com.ceej.expensetracker.R
++import com.ceej.expensetracker.modules.ButtonColors
++import com.ceej.expensetracker.modules.Fonts
++import com.ceej.expensetracker.screens.signup.component.SignUpComponent
+ 
+ @Composable
+ fun SignUpScreen(
+Index: app/src/main/java/com/ceej/common/expensetracker/signup/SignUpState.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/signup/SignUpState.kt b/app/src/main/java/com/ceej/expensetracker/screens/signup/SignUpState.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/signup/SignUpState.kt
+rename to app/src/main/java/com/ceej/expensetracker/screens/signup/SignUpState.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/signup/SignUpState.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/screens/signup/SignUpState.kt	(date 1777447805991)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.signup
++package com.ceej.expensetracker.screens.signup
+ 
+ import com.ceej.common.validation.PasswordValidationState
+ import com.ceej.common.validation.UsernameValidationState
+Index: app/src/main/java/com/ceej/common/expensetracker/signup/SignUpViewModel.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/signup/SignUpViewModel.kt b/app/src/main/java/com/ceej/expensetracker/screens/signup/SignUpViewModel.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/signup/SignUpViewModel.kt
+rename to app/src/main/java/com/ceej/expensetracker/screens/signup/SignUpViewModel.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/signup/SignUpViewModel.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/screens/signup/SignUpViewModel.kt	(date 1777447806021)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.signup
++package com.ceej.expensetracker.screens.signup
+ 
+ import androidx.lifecycle.ViewModel
+ import com.ceej.common.use_case.ValidateEmail
+Index: app/src/main/java/com/ceej/common/expensetracker/decompose/RootComponent.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/decompose/RootComponent.kt b/app/src/main/java/com/ceej/expensetracker/root/RootComponent.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/decompose/RootComponent.kt
+rename to app/src/main/java/com/ceej/expensetracker/root/RootComponent.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/decompose/RootComponent.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/root/RootComponent.kt	(date 1777447926523)
+@@ -1,10 +1,10 @@
+-package com.ceej.common.expensetracker.decompose
++package com.ceej.expensetracker.root
+ 
+ import com.arkivanov.decompose.router.stack.ChildStack
+ import com.arkivanov.decompose.value.Value
+-import com.ceej.common.expensetracker.login.component.LoginComponent
+-import com.ceej.common.expensetracker.signup.component.SignUpComponent
+-import com.ceej.common.expensetracker.splash.component.SplashComponent
++import com.ceej.expensetracker.screens.login.component.LoginComponent
++import com.ceej.expensetracker.screens.signup.component.SignUpComponent
++import com.ceej.expensetracker.screens.splash.component.SplashComponent
+ 
+ interface RootComponent {
+     val stack: Value<ChildStack<*, Child>>
+Index: app/src/main/java/com/ceej/common/expensetracker/ui/theme/Color.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/ui/theme/Color.kt b/app/src/main/java/com/ceej/expensetracker/ui/theme/Color.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/ui/theme/Color.kt
+rename to app/src/main/java/com/ceej/expensetracker/ui/theme/Color.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/ui/theme/Color.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/ui/theme/Color.kt	(date 1777447806249)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.ui.theme
++package com.ceej.expensetracker.ui.theme
+ 
+ import androidx.compose.ui.graphics.Color
+ 
+Index: app/src/main/java/com/ceej/common/expensetracker/modules/ModuleAlertDialogs.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/modules/ModuleAlertDialogs.kt b/app/src/main/java/com/ceej/expensetracker/modules/ModuleAlertDialogs.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/modules/ModuleAlertDialogs.kt
+rename to app/src/main/java/com/ceej/expensetracker/modules/ModuleAlertDialogs.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/modules/ModuleAlertDialogs.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/modules/ModuleAlertDialogs.kt	(date 1777447806045)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.modules
++package com.ceej.expensetracker.modules
+ 
+ import androidx.compose.material.AlertDialog
+ import androidx.compose.material.Button
+Index: app/src/main/java/com/ceej/common/expensetracker/decompose/DefaultRootComponent.kt
+===================================================================
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/decompose/DefaultRootComponent.kt b/app/src/main/java/com/ceej/expensetracker/root/DefaultRootComponent.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/decompose/DefaultRootComponent.kt
+rename to app/src/main/java/com/ceej/expensetracker/root/DefaultRootComponent.kt
+--- a/app/src/main/java/com/ceej/common/expensetracker/decompose/DefaultRootComponent.kt	(revision 0f68512c449f2b6e62fd97bfea64e4166f1b67a0)
++++ b/app/src/main/java/com/ceej/expensetracker/root/DefaultRootComponent.kt	(date 1777447806226)
+@@ -1,4 +1,4 @@
+-package com.ceej.common.expensetracker.decompose
++package com.ceej.expensetracker.root
+ 
+ import android.os.Parcelable
+ import com.arkivanov.decompose.ComponentContext
+@@ -9,14 +9,14 @@
+ import com.arkivanov.decompose.router.stack.push
+ import com.arkivanov.decompose.router.stack.replaceAll
+ import com.arkivanov.decompose.value.Value
+-import com.ceej.common.expensetracker.login.component.DefaultLoginComponent
+-import com.ceej.common.expensetracker.signup.component.DefaultSignUpComponent
+-import com.ceej.common.expensetracker.splash.component.DefaultSplashComponent
++import com.ceej.expensetracker.screens.login.component.DefaultLoginComponent
++import com.ceej.expensetracker.screens.signup.component.DefaultSignUpComponent
++import com.ceej.expensetracker.screens.splash.component.DefaultSplashComponent
+ import kotlinx.parcelize.Parcelize
+ 
+ class DefaultRootComponent(
+     componentContext: ComponentContext,
+-) : RootComponent, ComponentContext by componentContext {
++) : com.ceej.expensetracker.root.RootComponent, ComponentContext by componentContext {
+ 
+     private val navigation = StackNavigation<Config>()
+ 
+diff --git a/app/src/main/java/com/ceej/common/expensetracker/modules/AppBrushes.kt b/app/src/main/java/com/ceej/expensetracker/modules/AppBrushes.kt
+rename from app/src/main/java/com/ceej/common/expensetracker/modules/AppBrushes.kt
+rename to app/src/main/java/com/ceej/expensetracker/modules/AppBrushes.kt

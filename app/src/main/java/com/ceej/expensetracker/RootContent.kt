@@ -13,7 +13,7 @@ import com.arkivanov.decompose.extensions.compose.jetpack.stack.animation.stackA
 import com.ceej.common.expensetracker.data.network.NetworkConnectivityObserver
 import com.ceej.common.network.ConnectivityObserver
 import com.ceej.expensetracker.login.LoginScreen
-import com.ceej.expensetracker.decompose.RootComponent
+import com.ceej.expensetracker.root.RootComponent
 import com.ceej.expensetracker.modules.NoInternetAlertDialog
 import com.ceej.expensetracker.signup.SignUpScreen
 import com.ceej.expensetracker.splash.SplashScreen
