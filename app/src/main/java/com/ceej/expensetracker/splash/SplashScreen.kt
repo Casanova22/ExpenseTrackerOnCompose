@@ -46,7 +46,7 @@ fun SplashScreen(component: SplashComponent) {
         contentAlignment = Alignment.Center
     ) {
         Text(
-            text = "Expense\nTracker",
+            text = "Expense\n\nTracker",
             fontFamily = FontFamily(Font(R.font.varela_round)),
             textAlign = TextAlign.Center,
             fontSize = 32.sp,
