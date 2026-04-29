@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.ceej.common.expensetracker"
+    namespace = "com.ceej.expensetracker"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.ceej.jc.expensetracker"
+        applicationId = "com.ceej.expensetracker"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

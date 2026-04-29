@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.ceej.common.expensetracker.data"
+    namespace = "com.ceej.jc.expensetracker.data"
     compileSdk = 34
 
     defaultConfig {

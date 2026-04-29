@@ -1,0 +1,490 @@
+<changelist name="Uncommitted_changes_before_rebase_[Changes]" date="1777441356384" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/proto.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/source-to-classes.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/internal-name-to-source.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/internal-name-to-source.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/subtypes.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/source-to-output.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/class-fq-name-to-source.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$callback$1$onLost$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$callback$1$onLosing$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/remote/KtorClient$httpClient$1$3.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.values.at" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/subtypes.tab.values.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/class-fq-name-to-source.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/remote/KtorClient$httpClient$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/repository/ExpenseRepositoryImpl$getExpenses$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$callback$1$onLost$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/package-parts.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/lookups.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/file-to-id.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/internal-name-to-source.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shrunk-classpath-snapshot.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/subtypes.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/supertypes.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/a55fad51d92c4263863e7f54ee06eab9/transformed/empty/desugar_graph.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/remote/KtorClient$httpClient$1$3.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/proto.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/remote/dto/ExpenseDto$Companion.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/remote/dto/ExpenseDto.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/compile_library_classes_jar/debug/classes.jar" />
+    <option name="AFTER_PATH" value="data/build/intermediates/compile_library_classes_jar/debug/classes.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/classes.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/remote/dto/ExpenseDtoKt.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/remote/dto/ExpenseDto.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/id-to-file.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$callback$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/remote/KtorClient$httpClient$1$2.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream.len" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/source-to-output.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/libs/data.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/subtypes.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/remote/KtorClient$httpClient$1$3.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/class-attributes.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream.len" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/file-to-id.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/META-INF/data_debug.kotlin_module" />
+    <option name="AFTER_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/META-INF/data_debug.kotlin_module" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/data_debug.kotlin_module" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/class-fq-name-to-source.tab.values.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/source-to-classes.tab.values.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/remote/dto/ExpenseDtoKt.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/source-to-classes.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/remote/dto/ExpenseDto$$serializer.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$callback$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/source-to-output.tab.values.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.values.at" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/supertypes.tab.values.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/java_res/debug/out/META-INF/data_debug.kotlin_module" />
+    <option name="AFTER_PATH" value="data/build/intermediates/java_res/debug/out/META-INF/data_debug.kotlin_module" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/data_debug1.kotlin_module" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/class-attributes.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/class-attributes.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/repository/ExpenseRepositoryImpl.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/file-to-id.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$callback$1$onAvailable$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/lookups.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/remote/dto/ExpenseDto$Companion.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/remote/dto/ExpenseDtoKt.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/file-to-id.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/supertypes.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/repository/ExpenseRepositoryImpl$getExpenses$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/remote/KtorClient.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$callback$1$onLosing$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/id-to-file.tab.values.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$callback$1$onUnavailable$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/internal-name-to-source.tab.values.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/remote/KtorClient$httpClient$1$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/class-fq-name-to-source.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/repository/ExpenseRepositoryImpl.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/proto.tab.values.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/remote/dto/ExpenseDto.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$callback$1$onLost$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/repository/ExpenseRepositoryImpl.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$callback$1$onAvailable$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/remote/KtorClient.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/remote/KtorClient$httpClient$1$2$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/supertypes.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/META-INF/data_debug.kotlin_module" />
+    <option name="AFTER_PATH" value="data/build/tmp/kotlin-classes/debug/META-INF/data_debug.kotlin_module" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/data_debug2.kotlin_module" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/source-to-classes.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/source-to-output.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$callback$1$onLosing$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/repository/ExpenseRepositoryImpl$getExpenses$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/last-build.bin" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/last-build.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/last-build.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/supertypes.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/remote/KtorClient$httpClient$1$2$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream.len" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/package-parts.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$callback$1$onUnavailable$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/remote/KtorClient$httpClient$1$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/lookups.tab.values.at" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/remote/KtorClient.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/source-to-output.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/class-fq-name-to-source.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/subtypes.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/lookups.tab.keystream.len" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/class-attributes.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/remote/dto/ExpenseDto$$serializer.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/remote/KtorClient$httpClient$1$2$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$callback$1$onUnavailable$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/proto.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/proto.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/internal-name-to-source.tab.keystream" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/remote/KtorClient$httpClient$1$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/remote/KtorClient$httpClient$1$2.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/lookups.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/remote/dto/ExpenseDto$Companion.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/local-state/build-history.bin" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/local-state/build-history.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/build-history.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/remote/KtorClient$httpClient$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/package-parts.tab_i" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/package-parts.tab_i" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/remote/KtorClient$httpClient$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab" />
+    <option name="AFTER_PATH" value="data/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/source-to-classes.tab" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/remote/dto/ExpenseDto$$serializer.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/.transforms/e1527720d4ae33421ba6affecd96eeea/transformed/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$callback$1$onAvailable$1.dex" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/intermediates/runtime_library_classes_dir/debug/com/ceej/jc/expensetracker/data/remote/KtorClient$httpClient$1$2.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="data/build/tmp/kotlin-classes/debug/com/ceej/jc/expensetracker/data/network/NetworkConnectivityObserver$observe$1$callback$1.class" />
+  </binary>
+</changelist>
