@@ -23,11 +23,16 @@ import com.ceej.expensetracker.splash.component.SplashComponent
 import kotlinx.coroutines.delay
 
 @Composable
-fun SplashScreen(component: SplashComponent) {
+fun splashScreen(
+    component: SplashComponent,
+    isNetworkAvailable : Boolean
+) {
 
-    LaunchedEffect(Unit) {
-        delay(3000)
-        component.onFinished()
+    LaunchedEffect(isNetworkAvailable) {
+        if (isNetworkAvailable) {
+            delay(3000)
+            component.onFinished()
+        }
     }
 
     Box(

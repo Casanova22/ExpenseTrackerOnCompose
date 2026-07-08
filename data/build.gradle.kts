@@ -37,6 +37,7 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":common"))
 
+
     val ktorVersion = "2.3.12"
     implementation("io.ktor:ktor-client-core:$ktorVersion")
     implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
