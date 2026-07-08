@@ -53,8 +53,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.ceej.expensetracker.R
-import com.ceej.expensetracker.modules.ButtonColors
-import com.ceej.expensetracker.modules.Fonts
+import com.ceej.expensetracker.utils.ButtonColors
+import com.ceej.expensetracker.utils.Fonts
 import com.ceej.expensetracker.signup.component.SignUpComponent
 import com.ceej.jc.expensetracker.signup.SignUpViewModel
 
@@ -66,6 +66,8 @@ fun SignUpScreen(
     val state by viewModel.state.collectAsState()
     var passwordVisible by remember { mutableStateOf(false) }
     var confirmPasswordVisible by remember { mutableStateOf(false) }
+    val bothPasswordsFilled = state.password.isNotEmpty() && state.confirmPassword.isNotEmpty()
+    val passwordsMatch = state.password == state.confirmPassword
 
     Box(
         modifier = Modifier
@@ -94,7 +96,9 @@ fun SignUpScreen(
                 value = state.email,
                 onValueChange = { viewModel.onEvent(SignUpEvent.EmailChanged(it)) },
                 label = { Text("Email", style = Fonts.appMainFont(), fontSize = 16.sp) },
-                modifier = Modifier.fillMaxWidth().padding(top = 16.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 16.dp),
                 shape = RoundedCornerShape(20.dp),
                 isError = !state.isEmailValid && state.email.isNotEmpty(),
                 supportingText = {
@@ -103,14 +107,17 @@ fun SignUpScreen(
                     }
                 },
                 keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Email),
-                textStyle = Fonts.appMainFont()
+                textStyle = Fonts.appMainFont(),
+                singleLine = true
             )
 
             OutlinedTextField(
                 value = state.password,
                 onValueChange = { viewModel.onEvent(SignUpEvent.PasswordChanged(it)) },
                 label = { Text("Password", style = TextStyle(fontFamily = FontFamily(Font(R.font.varela_round))), fontSize = 16.sp) },
-                modifier = Modifier.fillMaxWidth().padding(top = 16.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 16.dp),
                 visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                 isError = !state.passwordError.passwordSuccessful && state.password.isNotEmpty(),
                 trailingIcon = {
@@ -121,14 +128,17 @@ fun SignUpScreen(
                 },
                 shape = RoundedCornerShape(20.dp),
                 keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Password),
-                textStyle = Fonts.appMainFont()
+                textStyle = Fonts.appMainFont(),
+                singleLine = true
             )
 
             OutlinedTextField(
                 value = state.confirmPassword,
                 onValueChange = { viewModel.onEvent(SignUpEvent.ConfirmPasswordChanged(it)) },
                 label = { Text("Confirm Password", style = Fonts.appMainFont(), fontSize = 16.sp) },
-                modifier = Modifier.fillMaxWidth().padding(top = 16.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 16.dp),
                 visualTransformation = if (confirmPasswordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                 trailingIcon = {
                     val image = if (confirmPasswordVisible) Icons.Filled.Visibility else Icons.Filled.VisibilityOff
@@ -138,7 +148,8 @@ fun SignUpScreen(
                 },
                 shape = RoundedCornerShape(20.dp),
                 keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Password),
-                textStyle = Fonts.appMainFont()
+                textStyle = Fonts.appMainFont(),
+                singleLine = true
             )
 
             Column(modifier = Modifier.padding(top = 20.dp)) {
@@ -162,6 +173,11 @@ fun SignUpScreen(
                     check = state.passwordError.hasSpecialCharacter,
                     isError = state.password.isNotEmpty() && !state.passwordError.hasSpecialCharacter
                 )
+                ConditionContainer(
+                    condition = "passwords must match",
+                    check = bothPasswordsFilled && passwordsMatch,
+                    isError = bothPasswordsFilled && !passwordsMatch
+                )
             }
 
             Spacer(modifier = Modifier.weight(15F))
@@ -169,10 +185,13 @@ fun SignUpScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = 16.dp)
-                    .background(brush = ButtonColors.mainButtonGradient(), shape = RoundedCornerShape(20.dp))
-                    .clickable { 
+                    .background(
+                        brush = ButtonColors.mainButtonGradient(),
+                        shape = RoundedCornerShape(20.dp)
+                    )
+                    .clickable {
                         if (state.isEmailValid && state.passwordError.passwordSuccessful) {
-                            component.onSignUpClicked() 
+                            component.onSignUpClicked()
                         }
                     },
                 contentAlignment = Alignment.Center
@@ -191,7 +210,9 @@ fun SignUpScreen(
             Text(
                 text = stringResource(id = R.string.eula_privacy),
                 fontFamily = FontFamily(Font(R.font.varela_round)),
-                modifier = Modifier.fillMaxWidth().padding(bottom = 50.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 50.dp),
                 textAlign = TextAlign.Center
             )
         }

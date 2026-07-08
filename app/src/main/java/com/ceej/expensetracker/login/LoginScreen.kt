@@ -50,8 +50,8 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.ceej.expensetracker.R
 import com.ceej.expensetracker.login.component.LoginComponent
-import com.ceej.expensetracker.modules.ButtonColors
-import com.ceej.expensetracker.modules.Fonts
+import com.ceej.expensetracker.utils.ButtonColors
+import com.ceej.expensetracker.utils.Fonts
 
 @Composable
 fun LoginScreen(
