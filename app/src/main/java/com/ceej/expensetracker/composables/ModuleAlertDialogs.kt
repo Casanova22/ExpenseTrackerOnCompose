@@ -1,4 +1,4 @@
-package com.ceej.expensetracker.modules
+package com.ceej.expensetracker.composables
 
 import androidx.compose.material.AlertDialog
 import androidx.compose.material.Button
