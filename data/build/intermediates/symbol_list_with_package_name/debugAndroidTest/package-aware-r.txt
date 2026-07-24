@@ -1,3 +1,0 @@
-com.ceej.common.expensetracker.data.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme
