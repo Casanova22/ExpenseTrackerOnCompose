@@ -61,6 +61,10 @@ dependencies {
 
     implementation("androidx.navigation:navigation-compose:2.7.1")
 
+    implementation(platform("io.insert-koin:koin-bom:4.1.1"))
+    implementation("io.insert-koin:koin-android")
+    implementation("io.insert-koin:koin-android-compose")
+
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.30.0")
     implementation("androidx.compose.material:material:1.4.0")
     implementation("androidx.compose.material:material-icons-extended:1.5.4")

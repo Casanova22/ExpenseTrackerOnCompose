@@ -17,4 +17,7 @@ kotlin {
 dependencies {
     api(project(":common"))
     api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+
+    implementation(platform("io.insert-koin:koin-bom:4.0.4"))
+    implementation("io.insert-koin:koin-core")
 }
